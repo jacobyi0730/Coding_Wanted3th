@@ -1,54 +1,137 @@
-#include <iostream>
+﻿#include <iostream>
+#include "Calc.h"
 using namespace std;
+
+// 함수의 선언
+// 함수의 정의/구현
+// 함수의 호출
+
+//int k = 100;    // 전역변수
+int DivPer(int a, int b)
+{
+    static int k = 100; // 정적변수
+    return (a + b) / k;
+}
 
 int main(int argc, char* argv[])
 {
-    cout << "Hello World!" << endl; 
-    
-
-    
-    // C++이란?
-    // 1. 자료형(DataType)과 변수
-
-    // 정수형(Integer, int) -1, 0, 1, 2
-    // 실수형(float, double) -3.14f, 0.0f, 2.5f
-    // 논리형(Boolean, bool) true, false
-    // 문자형(char) 'a'
-    // 문자열
-
-    int n = 4; // 초기화
-
-    int n2;    // 변수 선언
-    n2 = n;    // 값을 대입
-    // 포인터 변수 : 주소값을 담는 변수
-    int* pN = &n; // 변수 n의 주소를 pN에 담고싶다.
-    int** ppN = &pN;
-
-    // 배열 : 연속된 공간
-    int aN[4]{0};
-    for (int i = 0; i < 4 ;i =  i + 1 )
+    // 1부터 10까지 중에 짝수만 출력하는 코드를 작성하세요.
+    // for문을 이용해야합니다.
+    // %
+    for (int i=1 ; i<=10 ; i++)
     {
-        aN[i] = (i + 1) * 10;
+        // i가 5이하이다. 그리고 i가 짝수라면 
+        if (i <= 5 && i % 2 == 0)
+        {
+            cout << i << endl;
+        }
     }
+
+
     
-    // 반복문
-    for (int i = 0; i < 4 ;i =  i + 1 )
+    // 조건문
+    int n = 10;
+    // 만약 n의 값이 10보다 작다면 행복해
+    // 그렇지 않고 n의 값이 10보다 작다면 가자!
+    if (n < 10)
     {
-        cout << aN[i] << endl;
+        cout << "행복해" << endl;
     }
-    
+    else if (n < 20)
+    {
+        cout << "가자!" << endl;
+    }
+    // 그렇지 않다면 좋아
+    else
+    {
+        cout << "좋아!" << endl;
+    }
 
 
     
-    
-    
 
-    // 실수형 변수 pi에 3.14f를 초기화 해보세요.
-    float pi = 3.14f;
+    
+    // int* k = nullptr;
+    // // 함수의 호출
+    // int i = 100000;
+    // int j = 200000;
+    // int result = DivPer(i, j);
+    // cout  << result << "%";
+}
 
-    // 논리형 변수 isGood을 선언하고 true를 대입하세요.
-    bool isGood;
-    isGood = true;
+
+
+
+
+
+
+
+int main21(int argc, char* argv[])
+{
+    // 함수의 호출
+    Add(10, 20);
+    
+    // 포인터변수 : 다른 변수의 주소값을 담는 변수
+    // int n = 10;
+    // int* pN = &n;
+    // *pN = 100;
+    // cout << *pN << endl;
+
+    // 변수 : 값타입, 포인트타입, 참조타입
+    // int n = 10;
+    // int k = 100;
+    // int& rN = n;
+    // rN = k;
+    // cout << "rN : " << rN << endl << "n : " << n << endl << "k : " << k;
+
+    
+    // cout << "Hello World!" << endl; 
+    //
+    //
+    // // C++이란?
+    // // 1. 자료형(DataType)과 변수
+    //
+    // // 정수형(Integer, int) -1, 0, 1, 2
+    // // 실수형(float, double) -3.14f, 0.0f, 2.5f
+    // // 논리형(Boolean, bool) true, false
+    // // 문자형(char) 'a'
+    // // 문자열
+    //
+    // int n = 4; // 초기화
+    //
+    // cout << sizeof(long long) << endl;
+    //
+    // int n2;    // 변수 선언
+    // n2 = n;    // 값을 대입
+    // // 포인터 변수 : 주소값을 담는 변수
+    // int* pN = &n; // 변수 n의 주소를 pN에 담고싶다.
+    // int** ppN = &pN;
+    //
+    // // 배열 : 연속된 공간
+    // int aN[4]{0};
+    // for (int i = 0; i < 4 ;i =  i + 1 )
+    // {
+    //     aN[i] = (i + 1) * 10;
+    // }
+    //
+    // // 반복문
+    // for (int i = 0; i < 4 ;i =  i + 1 )
+    // {
+    //     cout << aN[i] << endl;
+    // }
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    // // 실수형 변수 pi에 3.14f를 초기화 해보세요.
+    // float pi = 3.14f;
+    //
+    // // 논리형 변수 isGood을 선언하고 true를 대입하세요.
+    // bool isGood;
+    // isGood = true;
 
 
     
