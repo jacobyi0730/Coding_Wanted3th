@@ -3,10 +3,33 @@
 using namespace std;
 
 
-
-class Actor
+// 클래스
+// 가상함수 :
+// 순수가상함수
+class Test
 {
 public:
+    virtual void BeginPlay() = 0;
+};
+
+class Test2 : public Test
+{
+    virtual void BeginPlay() override
+    {
+        
+    }
+};
+
+class Attck
+{
+    
+};
+
+
+class Actor : public Test
+{
+public:
+    Attck attck;
     // 속성, 기능
     int Age;
     virtual void BeginPlay()
@@ -28,6 +51,9 @@ public:
 
 void main()
 {
+    Test2 te;
+
+    
     Pawn pawn;
 
     Actor* pActor = &pawn;
