@@ -2,6 +2,51 @@
 #include "Calc.h"
 using namespace std;
 
+
+
+
+
+
+
+
+
+//c->c++
+// 구조체(struct)
+// 클래스(class)
+
+struct MyStruct
+{
+    int n;
+    void Test(){}
+};
+
+class MyClass
+{
+public:
+    int n; // 속성 : 맴버 변수, 필드
+    void Test(){}   // 기능 : 맴버 함수, Method
+};
+
+
+int main555()
+{
+
+
+    
+    MyStruct a;
+    a.n = 10;
+    a.Test();
+    
+    MyClass b;
+    b.n = 100;
+    b.Test();
+}
+
+
+
+
+
+
 // 함수의 선언
 // 함수의 정의/구현
 // 함수의 호출
@@ -13,11 +58,27 @@ int DivPer(int a, int b)
     return (a + b) / k;
 }
 
-int main(int argc, char* argv[])
+int main33(int argc, char* argv[])
 {
+    // 변수
+    // 2가지
+    // 정적 할당
+    int m = 0;
+    // 동적 할당
+    int* pM = new int[2];
+
+    delete[] pM;
+
+
+    
     // 1부터 10까지 중에 짝수만 출력하는 코드를 작성하세요.
     // for문을 이용해야합니다.
     // %
+
+    int a = 1;
+
+    int b = a & 1;
+    
     for (int i=1 ; i<=10 ; i++)
     {
         // i가 5이하이다. 그리고 i가 짝수라면 
