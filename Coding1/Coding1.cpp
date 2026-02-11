@@ -4,25 +4,39 @@ using namespace std;
 
 
 
-class Animal
+class Actor
 {
 public:
     // 속성, 기능
-    int age;
-    Animal(int newAge)
+    int Age;
+    virtual void BeginPlay()
     {
-        age = newAge;
+        cout << "Actor BeginPlay" << endl;
     }
-    ~Animal()
+};
+
+class Pawn : public Actor
+{
+public:
+    int Color;
+    virtual void BeginPlay() override
     {
+        Actor::BeginPlay();
+        cout << "Pawn BeginPlay" << endl;
     }
 };
 
 void main()
 {
-    int a(0);
-    // 정적 할당
-    Animal animal(10);
+    Pawn pawn;
+
+    Actor* pActor = &pawn;
+    Pawn* pPawn = &pawn;
+
+    pActor->BeginPlay();
+    pPawn->BeginPlay();
+    
+    
 }
 
 
@@ -47,7 +61,7 @@ public:
 };
 
 
-int main555()
+void main555()
 {
 
 
@@ -77,7 +91,7 @@ int DivPer(int a, int b)
     return (a + b) / k;
 }
 
-int main33(int argc, char* argv[])
+void main33(int argc, char* argv[])
 {
     // 변수
     // 2가지
