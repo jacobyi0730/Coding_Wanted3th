@@ -4,7 +4,26 @@ using namespace std;
 
 
 
+class Animal
+{
+public:
+    // 속성, 기능
+    int age;
+    Animal(int newAge)
+    {
+        age = newAge;
+    }
+    ~Animal()
+    {
+    }
+};
 
+void main()
+{
+    int a(0);
+    // 정적 할당
+    Animal animal(10);
+}
 
 
 
