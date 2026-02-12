@@ -19,7 +19,11 @@ class Pawn : public Actor{};
 
 int main()
 {
-    printf_s("%s", StringCat("Hello", "World"));
+    std::shared_ptr<Actor*> a = std::make_shared<Actor*>(new Actor);
+    (*(a.get()))->Print();
+    
+    printf_s("\n%s", typeid(**(a.get())).name());
+    //printf_s("%s", StringCat("Hello", "World"));
     //int a = Add(10, 20);
     //int a = (10+20);
     
