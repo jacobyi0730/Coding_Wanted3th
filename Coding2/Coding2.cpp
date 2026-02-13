@@ -17,12 +17,26 @@ class Pawn : public Actor{};
 #define String(a) #a
 #define StringCat(a,b) a##b
 
+#ifdef MAX
+#undef MAX
+
+#elif Add 
+#else
+
+#endif
+
+
+union Uni{
+    int a;
+    char c[4];
+};
+
 int main()
 {
-    std::shared_ptr<Actor*> a = std::make_shared<Actor*>(new Actor);
-    (*(a.get()))->Print();
-    
-    printf_s("\n%s", typeid(**(a.get())).name());
+    // std::shared_ptr<Actor*> a = std::make_shared<Actor*>(new Actor);
+    // (*(a.get()))->Print();
+    //
+    // printf_s("\n%s", typeid(**(a.get())).name());
     //printf_s("%s", StringCat("Hello", "World"));
     //int a = Add(10, 20);
     //int a = (10+20);
@@ -35,11 +49,11 @@ int main()
     // int&& aa = 10;
 
     //
-    // // std::unique_ptr<Actor> pActor = std::make_unique<Actor>();
-    // // std::unique_ptr<Actor> pActor2 = pActor;
-    // std::shared_ptr<Actor> pActor = std::make_shared<Actor>();
-    // std::shared_ptr<Actor> pActor2 = pActor;
-    // std::weak_ptr<Actor> pActor3 = pActor;
+    // std::unique_ptr<Actor> pActor = std::make_unique<Actor>();
+    // std::unique_ptr<Actor> pActor2 = pActor;
+    std::shared_ptr<Actor> pActor = std::make_shared<Actor>();
+    std::shared_ptr<Actor> pActor2 = pActor;
+    std::weak_ptr<Actor> pActor3 = pActor;
     //
     // pActor->Print();
     //
